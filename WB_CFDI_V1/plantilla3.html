@@ -1,0 +1,464 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<style type="text/css">
+	    html,
+		body {
+			height: 100%;
+		}
+	
+        table, td {
+			/*border-collapse: collapse;*/
+			border:0px;
+			/*border: 1px solid #D9D9D9;*/	/*border-spacing: 1px;*/
+        }
+		
+		.border1{
+			border: 0.1em solid #C4C4C4;
+		}
+		
+		.paddR{
+			padding-right: 5px;
+			height: 24px;
+			text-align: right;
+			vertical-align: middle;
+		}
+		
+		.paddL{
+			padding-left: 5px;
+			height: 24px;
+			text-align: left;
+			vertical-align: middle;
+		}
+		
+		.BorderB1 {			
+			border-bottom:0.1em solid #C4C4C4;
+		}
+		
+		.BorderL1 {			
+			border-left:0.1em solid #C4C4C4;
+		}
+
+.MarginB1 {            margin-bottom: 4px;
+}
+.PaddingL1 {			padding-left:10px;
+}
+.Size1 {            /*word-spacing: 20px;*/
+			font-size: 11px;
+}
+    .Font1 {			font-family:"Courier New";
+}
+.MarginB2 {            margin-bottom: 10px;
+}
+.MarginT1 {            margin-top: 3px;
+}
+.MarginT2 {            margin-top: 3px;
+}
+.PaddingLR1 {			padding-left:10px;
+			padding-right:10px;
+}
+.Size11 {            /*word-spacing: 20px;*/
+			font-size: 11px;
+}
+.Size4 {            word-spacing: 0px;
+			font-size: 10px;
+}
+    </style>
+</head>
+
+<body style="margin: 10px;">
+<table width="100%" cellpadding="0" cellspacing="2" class="border1" style="margin-bottom: 5px;">
+  <tbody>
+    <tr>
+      <td valign="top" style="padding-left: 5px;"><table width="100%">
+        <tbody>
+          <tr>
+            <td style="font-weight: bold" id="emisorNombre">{nombre}</td>
+          </tr>
+          <tr>
+            <td height="62" valign="top" id="emisorRFC" style="font-weight: bold">{rfc}</td>
+          </tr>
+        </tbody>
+      </table>
+        <table width="100%" border="1" cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <td bgcolor="#F0F0F0" style="font-weight: bold" class="paddL">Régimen Fiscal:</td>
+            </tr>
+            <tr>
+              <td style="font-weight: normal" class="paddL" id="emisorRegimen">{regimen}</td>
+            </tr>
+            <tr>
+              <td bgcolor="#F0F0F0" style="font-weight: bold" class="paddL">Lugar de expedición:</td>
+            </tr>
+            <tr>
+              <td style="font-weight: normal" class="paddL" id="lugarExpedicion">{lugar}</td>
+            </tr>
+            <tr>
+              <td bgcolor="#F0F0F0" style="font-weight: bold" class="paddL">Uso de CFDI:</td>
+            </tr>
+            <tr>
+              <td class="paddL" id="receptorUsoCFDI">{UsoCFDI}</td>
+            </tr>
+          </tbody>
+      </table></td>
+      <td width="340" valign="top"><table width="100%" border="1" cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <td height="40" colspan="2" align="center" bgcolor="#800000" style="font-size: 22px; font-weight: bold; font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #FFFFFF;">FACTURA ELECTRONICA</td>
+          </tr>
+          <tr>
+            <td width="100" bgcolor="#F0F0F0" class="paddR" style="font-weight: bold">Serie:</td>
+            <td bgcolor="#F0F0F0" style="font-weight: bold" class="paddR">Folio Factura Interno:</td>
+          </tr>
+          <tr>
+            <td class="paddR" id="serie">{serie}</td>
+            <td class="paddR" id="folio">{folio}</td>
+          </tr>
+          <tr>
+            <td colspan="2" bgcolor="#F0F0F0" class="paddR" style="font-weight: bold">Folio Fiscal:</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="paddR" id="complementoUUID">{uuid}</td>
+          </tr>
+          <tr>
+            <td colspan="2" bgcolor="#F0F0F0" class="paddR" style="font-weight: bold">No de Serie del Certificado del CSD:</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="paddR" id="noCertificado" style="font-weight: normal">{no certificado}</td>
+          </tr>
+          <tr>
+            <td colspan="2" bgcolor="#F0F0F0" class="paddR" style="font-weight: bold"><span class="paddR" style="font-weight: bold">Fecha y hora de emisión:</span></td>
+          </tr>
+          <tr>
+			  <td colspan="2" class="paddR" style="font-weight: normal"><span id="fecha">{fecha}</span></td>
+          </tr>
+        </tbody>
+      </table></td>
+    </tr>
+  </tbody>
+</table>
+	
+<div style="height: 4px;background-color: #800000"></div>
+<table width="100%" cellpadding="0" cellspacing="2" class="border1" style="margin-bottom: 5px;">
+  <tbody>
+    <tr>
+      <td bgcolor="#F0F0F0" style="font-weight: bold;" class="paddL">Cliente:</td>
+      <td width="335" bgcolor="#F0F0F0" class="paddL" style="font-weight: bold;">&nbsp;</td>
+    </tr>
+    <tr>
+      <td class="paddL" id="receptorNombre">{nombre}</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td bgcolor="#F0F0F0" class="paddL" style="font-weight: bold;">RFC:</td>
+      <td bgcolor="#F0F0F0" class="paddL">&nbsp;</td>
+    </tr>
+    <tr>
+      <td class="paddL" id="receptorRFC">{rfc}</td>
+      <td class="paddR">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+	
+<div style="height: 4px;background-color: #800000"></div>
+<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 5px;" class="border1 MarginB1 Size1" id="concepto">
+  <tbody>
+    <tr>
+      <td width="100" height="20" align="center" valign="middle" bgcolor="#F0F0F0" class="BorderB1"><strong>SERIE</strong></td>
+      <td width="100" align="center" valign="middle" bgcolor="#F0F0F0" class="BorderL1 BorderB1"><strong>FOLIO</strong></td>
+      <td width="100" align="center" valign="middle" bgcolor="#F0F0F0" class="BorderL1 BorderB1"><strong>ImpSaldoAnt</strong></td>
+      <td width="100" align="center" valign="middle" bgcolor="#F0F0F0" class="BorderL1 BorderB1"><strong>ImpPagado</strong></td>
+      <td width="100" align="center" valign="middle" bgcolor="#F0F0F0" class="BorderL1 BorderB1"><strong>ImpSaldoInsoluto</strong></td>
+      <td width="100" align="center" valign="middle" bgcolor="#F0F0F0" class="BorderL1 BorderB1"><strong>MonedaDR</strong></td>
+      <td width="100" align="center" valign="middle" bgcolor="#F0F0F0" class="BorderL1 BorderB1"><strong>MetodoDePagoDR</strong></td>
+      <td align="left" valign="middle" bgcolor="#F0F0F0" class="MarginB1 Size1 PaddingL1 BorderB1 BorderL1"><strong>ID_DOCUMENTO</strong></td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<div class="MarginT2 Footer">
+  <table width="100%" class="Font1 border1">
+    <tbody>
+<tr>
+        <td width="225" height="111" align="center" valign="middle" nowrap class="QR" style="background-repeat:no-repeat;background-size: 120% 120%;background-position: center ;"><div style="width:225px"></div></td>
+        <td class="PaddingLR1 Size4" style="font-size: 14px">
+			<table width="100%" border="1" style="font-size: 14px" class="MarginB2 MarginT1">
+          <tbody>
+            <tr>
+              <td width="300" style="font-weight: bold;">No de Serie del Certificado del SAT:</td>
+              <td rowspan="2" >&nbsp;</td>
+              <td width="300" style="font-weight: bold;">Fecha y hora de certificación:</td>
+            </tr>
+            <tr>
+              <td id="complementoNoCertificadoSAT">{certificado sat}</td>
+              <td width="242" id="complementoFechaTimbrado">{fecha}</td>
+            </tr>
+          </tbody>
+        </table>
+			
+		  <div class="MarginB1 MarginT1"><strong>Sello digital del CFDI:</strong></div>
+          <div class="MarginB2" id="complementoSelloCFD" wrap="115" style="font-size: 12px;">&nbsp;</div>
+          <div class="MarginB1" style="font-size: 14px"><strong>Sello SAT:</strong></div>
+          <div class="MarginB2" id="complementoSelloSAT" wrap="115" style="font-size: 12px;">&nbsp;</div></td>
+      </tr>
+<tr>
+  <td colspan="2" class="PaddingLR1 Size4" style="font-size: 14px">
+	  <div class="MarginB1 MarginT1" style="font-size: 14px"><strong>Cadena Original del Complemento de Certificación Digital del SAT:</strong></div>
+    <div class="MarginB2" id="complementoCadena" wrap="115" style="font-size: 12px;">&nbsp;</div></td>
+  </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

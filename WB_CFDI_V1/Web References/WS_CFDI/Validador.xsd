@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://validar/" targetNamespace="http://validar/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ValidaAgente" type="tns:ValidaAgente" />
+  <xs:element name="ValidaAgenteE" type="tns:ValidaAgenteE" />
+  <xs:element name="ValidaAgenteEResponse" type="tns:ValidaAgenteEResponse" />
+  <xs:element name="ValidaAgenteResponse" type="tns:ValidaAgenteResponse" />
+  <xs:element name="ValidaAll" type="tns:ValidaAll" />
+  <xs:element name="ValidaAllE" type="tns:ValidaAllE" />
+  <xs:element name="ValidaAllEResponse" type="tns:ValidaAllEResponse" />
+  <xs:element name="ValidaAllResponse" type="tns:ValidaAllResponse" />
+  <xs:complexType name="ValidaAgente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xml" type="xs:string" />
+      <xs:element minOccurs="0" name="agente" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ValidaAgenteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultadoValidacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="resultadoValidacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="efos" type="xs:string" />
+      <xs:element minOccurs="0" name="estatus" type="xs:string" />
+      <xs:element minOccurs="0" name="mensaje" type="xs:string" />
+      <xs:element minOccurs="0" name="npac" type="xs:string" />
+      <xs:element minOccurs="0" name="observacion" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ValidaAllE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xml" type="xs:string" />
+      <xs:element minOccurs="0" name="Parametro" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ValidaAllEResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultadoValidacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ValidaAll">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xml" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ValidaAllResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultadoValidacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ValidaAgenteE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xml" type="xs:string" />
+      <xs:element minOccurs="0" name="agente" type="xs:string" />
+      <xs:element minOccurs="0" name="Parametro" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ValidaAgenteEResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultadoValidacion" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

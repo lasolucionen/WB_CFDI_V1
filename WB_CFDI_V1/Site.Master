@@ -1,0 +1,156 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WB_CFDI_V1.Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link id="Link1" href="~/Css/Theme2.css" rel="stylesheet" type="text/css" runat="server" />
+    
+    <!-- Bootstrap core CSS -->
+    <link id="Link2" href="~/Css/bootstrap.min.css" rel="stylesheet" runat="server" />
+    <link id="Link3" href="~/Css/bootstrap-theme.min.css" rel="stylesheet" runat="server" />
+    <!-- jQWidgets CSS -->
+    <link id="Link4" href="~/JqWidgets/styles/jqx.base.css" rel="stylesheet" runat="server" />
+    <link id="Link5" href="~/JqWidgets/styles/jqx.bootstrap.css" rel="stylesheet" runat="server"/>
+    
+
+    <script type="text/javascript" src="<%= ResolveUrl("~/Scripts/jquery.js") %>"></script>
+    
+    <script type="text/javascript" src="<%= ResolveUrl("~/Scripts/jquery.form.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/Scripts/bootstrap.min.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/Scripts/numeral.min.js") %>"></script>
+    
+    <script type="text/javascript" src="<%= ResolveUrl("~/JqWidgets/jqxcore.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/JqWidgets/jqxmenu.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/JqWidgets/jqxinput.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/JqWidgets/jqxbuttons.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/JqWidgets/jqxdata.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/JqWidgets/jqxgrid.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/JqWidgets/jqxgrid.selection.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/JqWidgets/jqxscrollbar.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/JqWidgets/jqxlistbox.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/JqWidgets/jqxdropdownlist.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/JqWidgets/jqxdatetimeinput.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/JqWidgets/jqxcalendar.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/JqWidgets/jqxtooltip.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/JqWidgets/globalization/globalize.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/JqWidgets/globalization/globalize.culture.es-ES.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/JqWidgets/jqxcombobox.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/JqWidgets/jqxgrid.columnsresize.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/JqWidgets/jqxgrid.sort.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/JqWidgets/jqxgrid.filter.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/JqWidgets/jqxgrid.grouping.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/JqWidgets/jqxgrid.pager.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/JqWidgets/jqxgrid.edit.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/JqWidgets/jqxfileupload.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/JqWidgets/jqxwindow.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/JqWidgets/jqxtextarea.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/JqWidgets/jqxcheckbox.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/JqWidgets/jqxtabs.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/JqWidgets/jqxradiobutton.js") %>"></script>
+
+    <link href="http://fonts.googleapis.com/css?family=Viga" rel="stylesheet" type="text/css">
+    <%--<link id="Link6" href="~/Css/Principal.css" rel="stylesheet" type="text/css" runat="server" />--%>
+    
+    <link id="Link6" href="<%= ResolveUrl("~/Css/Principal.css") + "?dt=" + DateTime.Now.ToString("mmddyyyyhhmmss") %>" rel="stylesheet" type="text/css" />
+
+<%--    <link id="Link7" href="~/Css/jquery-ui.css" rel="stylesheet" runat="server"/>--%>
+    <link id="Link7" href="~/jquery-ui-1.11.1/base/all.css" rel="stylesheet" runat="server"/>
+    
+<%--    <script type="text/javascript" src="<%= ResolveUrl("~/Scripts/jquery-ui.js") %>"></script>--%>
+    <script type="text/javascript" src="<%= ResolveUrl("~/jquery-ui-1.11.1/jquery-ui.js") %>"></script>
+
+
+    <title>Validador XML <%--<%=GetBD()%>--%></title>
+    
+    <style>
+        #jqxMenu .jqx-menu-item-top-hover-bootstrap {
+            
+            background-color: rgba(114, 44, 44, 0.91) !important;
+            color: white;
+        }
+
+        #jqxMenu {
+            color: black !important;
+        }
+
+    
+    </style>
+    
+    
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                if (window.location.pathname == "/Vistas/Pag1.aspx") {
+                    //$("Reporte1").addClass("menuSelect");
+                }
+
+                $("#jqxMenu").jqxMenu({ autoSizeMainItems: false, theme: "bootstrap", showTopLevelArrows: true, width: '95%' });
+                $("#jqxMenu").css("visibility", "visible");
+                //$('#ctl00_Reporte1').mouseover();
+
+            });
+
+
+
+        </script>
+</head>
+<body>
+    <header>
+        <table class="content-table">
+            <tr>
+                <td style=" text-align: center; background-color: #722C2C;">
+                    <div style="text-align: left; padding-left: 0px; padding-right: 1px;" >
+                        <div style="border: 1px solid #c8c8c8; width: 100%; margin: auto; padding: 5px; padding-left: 10px; padding-bottom: 6px; padding-top:9px ;font-weight: bold ; " class="Three-Dee">
+                            <img src="<%= ResolveUrl("~/Css/top.png") %>" style="display:block;margin:auto; height: 60px;" />
+                        </div>
+                    </div>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td style="border-top: solid 1px #e4e4e4; background-color: #F6B20E">
+                    <div id="jqxMenu">
+                        <ul>
+                            <%--<li><a href="<%= ResolveUrl("~/") %>">Inicio</a></li>--%>
+                            <li id="CargaArchivos" runat="server"><a id="A4" href="~/Vistas/Pag1.aspx" runat="server">Validador XML</a></li>
+                            <li id="Contraseña" runat="server">Contraseña</li>
+                            <li id="Admin" runat="server"><a id="A3" href="~/Vistas/Pag2.aspx" runat="server">Administrador</a></li>
+                            <li id="Compl" runat="server"><a id="A10" href="~/Vistas/Pag8.aspx" runat="server">Complementos de Pago</a></li>
+                            <li id="Consulta" runat="server"><a id="A1" href="~/Vistas/Pag4.aspx" runat="server">Consulta</a></li>
+                            <li id="Reporte1" runat="server"><a id="A8" href="~/Vistas/Pag6.aspx" runat="server">Reporte1</a></li>
+                            <li id="Reporte3" runat="server"><a id="A11" href="~/Vistas/Pag9.aspx" runat="server">Reporte2</a></li>
+                            <li id="Reporte2" runat="server"><a id="A9" href="~/Vistas/Pag7.aspx" runat="server">Reporte de facturas</a></li>
+                            <li id="Contr" runat="server"><a id="A7" href="~/Vistas/Pag3.aspx" runat="server">Contrarecibos</a></li>
+                            <li id="CUser" runat="server"><a id="A2" href="~/Vistas/Pag5.aspx" runat="server">Cuentas De Usuario</a></li>
+                            <li id="Iniciar" runat="server"><a id="A5" href="~/Vistas/Login.aspx" runat="server">Iniciar Sesión</a></li>
+                            <li id="Cerrar" runat="server"><a id="A6" href="~/Vistas/CerrarSesion.aspx" runat="server">Cerrar Sesión</a></li>
+                            <li id="Empresa" runat="server"></li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        </table>               
+    </header>
+    
+    <div style="padding: 10px 0 10px;">
+        <asp:ContentPlaceHolder ID="contenido" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+
+<asp:ContentPlaceHolder ID="head" runat="server">
+      
+</asp:ContentPlaceHolder>
+
+
+<asp:ContentPlaceHolder ID="scriptFooter" runat="server">
+        
+</asp:ContentPlaceHolder>
+    
+</body>
+</html>

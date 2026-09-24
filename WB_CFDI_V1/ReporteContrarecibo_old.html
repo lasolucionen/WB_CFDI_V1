@@ -1,0 +1,414 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+	
+	
+	
+	<style type="text/css">
+	    html,
+		body {
+			height: 100%;
+		}
+		
+
+        table, td {
+			/*border-collapse: collapse;*/
+			/*border:0px;*/
+			/*border: 1px solid #D9D9D9;*/
+			/*border-spacing: 1px;*/
+        }
+		
+		.border1{
+			border: 0.1em solid #C4C4C4;
+		}
+		
+		.paddR{
+			padding-right: 5px;
+			height: 24px;
+			text-align: right;
+			vertical-align: middle;
+		}
+		
+		.paddL{
+			padding-left: 5px;
+			height: 24px;
+			text-align: left;
+			vertical-align: middle;
+		}
+		
+		.BorderB1 {			
+			border-bottom:0.1em solid #C4C4C4;
+		}
+		
+		.BorderL1 {			
+			border-left:0.1em solid #C4C4C4;
+		}
+
+.MarginB1 {            margin-bottom: 4px;
+}
+.PaddingL1 {			padding-left:10px;
+}
+.Size1 {            /*word-spacing: 20px;*/
+			font-size: 11px;
+}
+    .Font1 {			font-family:"Courier New";
+}
+.MarginB2 {            margin-bottom: 10px;
+}
+.MarginT1 {            margin-top: 3px;
+}
+.MarginT2 {            margin-top: 3px;
+}
+.PaddingLR1 {			padding-left:10px;
+			padding-right:10px;
+}
+.Size11 {            /*word-spacing: 20px;*/
+			font-size: 11px;
+}
+.Size4 {            word-spacing: 0px;
+			font-size: 10px;
+}
+		
+		
+		.bcolor1{
+			background-color: #4F81BD;
+			color: white;
+			border: 1px solid silver;
+			padding: 3px;
+			white-space: nowrap;
+		}
+		
+		.bcolor2{
+			/*background-color: #DCE6F1;*/
+			color: black;
+			border: 1px solid silver;
+			padding: 3px;
+			white-space: nowrap;
+			text-align: center;
+		}
+		
+		.bcolor3{
+			background-color: #4F81BD;
+			color: white;
+			border: 1px solid silver;
+			padding: 3px;
+			padding-right: 10px;
+			white-space: nowrap;
+		}
+		
+		.bcolor4{
+			
+			border: 1px solid silver;
+			padding: 3px;
+		}
+		
+		.bcolor5{
+			/*background-color: #DCE6F1;*/
+			border: 1px solid silver;
+			padding: 3px;
+		}
+    </style>
+	
+</head>
+
+<body style="margin: 10px;">
+	
+<table width="100%" cellpadding="0" cellspacing="0" class="" style="">
+<tr>
+    <td valign="top" style="">
+	
+	<table style="width: 50%; margin: auto; margin-bottom: 10px;" cellpadding="0" cellspacing="0">
+		<tr>
+			<td style="width: 100px;">
+				<img src="Logo002.jpg" height="130">	
+			</td>
+			<td align="center" style="padding-left: 50px;">
+				<img src="Logo001.png">
+			</td>
+		</tr>
+		<tr>
+			<td style="padding-top: 10px;font-weight: bold;" colspan="2" align="center" id="fecha">
+			{FECHA}
+			</td>
+		</tr>
+	</table>
+		
+	<table cellpadding="0" cellspacing="0" style="margin: auto;">
+		<tr id="tbTR">
+			<td style="width: 100px;" valign="top">
+				    <table cellpadding="0" cellspacing="0">
+					<tr>
+						<td style="" class="bcolor4">&nbsp;
+							
+						</td>	
+					</tr>
+					<tr>
+						<td class="bcolor3">NUEVOS</td>	
+					</tr>
+					<tr>
+					  <td class="bcolor3">SIN PROCESAR</td>
+					</tr>
+					<tr>
+					  <td class="bcolor3">INCOMPLETOS</td>
+					</tr>
+					<tr>
+					  <td class="bcolor4">&nbsp;</td>
+					</tr>
+					<tr>
+					  <td class="bcolor3">POR VALIDAR</td>
+					</tr>
+					<tr>
+					  <td class="bcolor3">No. XML POR VALIDAR</td>
+					</tr>
+					<tr>
+					  <td class="bcolor3">$ POR VALIDAR</td>
+					</tr>
+					<tr>
+					  <td class="bcolor4">&nbsp;</td>
+					</tr>
+					<tr>
+					  <td class="bcolor3">VALIDADOS</td>
+					</tr>
+					<tr>
+					  <td class="bcolor3">$ VALIDADO</td>
+					</tr>
+					<tr>
+					  <td class="bcolor3">No. XML VALIDADO</td>
+					</tr>
+					<tr>
+					  <td class="bcolor4">&nbsp;</td>
+					</tr>
+					<tr>
+					  <td class="bcolor3">SIN PROCESAR AYER</td>
+					</tr>
+					<tr>
+					  <td class="bcolor3">INCOMPLETOS AYER</td>
+					</tr>
+					<tr>
+					  <td class="bcolor3">VALIDADOS AYER</td>
+					</tr>
+					</table>
+			</td>
+			
+<!---------------------------------------------------------------------------------->
+	  <td style="width: 100px;" valign="top" id="tbTD">
+			
+			  <table cellpadding="0" cellspacing="0" class="tb1">
+				<tr>
+						<td class="bcolor1 validadora" style="text-align: center;">
+							{VALIDADORA}
+						</td>	
+				</tr>
+				<tr>
+					<td class="bcolor2 nuevos">{NUEVOS}</td>	
+				</tr>
+				<tr>
+					<td class="bcolor2 sinProcesar">{SIN PROCESAR}</td>
+				</tr>
+				<tr>
+					<td class="bcolor2 incompletos">{INCOMPLETOS}</td>
+			    </tr>
+				<tr>
+					<td class="bcolor5">&nbsp;</td>
+			    </tr>
+				<tr>
+					<td class="bcolor2 porValidar">{POR VALIDAR}</td>
+			    </tr>
+				<tr>
+					<td class="bcolor2 nXmlPorValidar">{No. XML POR VALIDAR}</td>
+			    </tr>
+				<tr>
+					<td class="bcolor2 _PorValidar">{$ POR VALIDAR}</td>
+			    </tr>
+				<tr>
+					<td class="bcolor5">&nbsp;</td>
+			    </tr>
+				<tr>
+					<td class="bcolor2 validados">{VALIDADOS}</td>
+			    </tr>
+				<tr>
+					<td class="bcolor2 _Validado">{$ VALIDADO}</td>
+			    </tr>
+				<tr>
+					<td class="bcolor2 nXmlValidado">{No. XML VALIDADO}</td>
+			    </tr>
+				<tr>
+					<td class="bcolor5">&nbsp;</td>
+			    </tr>
+				<tr>
+					<td class="bcolor2 sinProcesarAyer">{SIN PROCESAR AYER}</td>
+			    </tr>
+				<tr>
+					<td class="bcolor2 incompletoAyer">{INCOMPLETOS AYER}</td>
+			    </tr>
+				<tr>
+					<td class="bcolor2 validadosAyer">{VALIDADOS AYER}</td>
+			    </tr>
+		      </table>
+
+			
+			</td>
+
+<!---------------------------------------------------------------------------------->
+	  <td style="width: 100px;" valign="top" id="tbTotal">
+			
+			  <table cellpadding="0" cellspacing="0" class="tb1">
+				<tr>
+						<td class="bcolor1" style="text-align: center;">
+							TOTAL
+						</td>	
+				</tr>
+				<tr>
+					<td class="bcolor2 nuevos1">{NUEVOS}</td>	
+				</tr>
+				<tr>
+					<td class="bcolor2 sinProcesar1">{SIN PROCESAR}</td>
+				</tr>
+				<tr>
+					<td class="bcolor2 incompletos1">{INCOMPLETOS}</td>
+			    </tr>
+				<tr>
+					<td class="bcolor5">&nbsp;</td>
+			    </tr>
+				<tr>
+					<td class="bcolor2 porValidar1">{POR VALIDAR}</td>
+			    </tr>
+				<tr>
+					<td class="bcolor2 nXmlPorValidar1">{No. XML POR VALIDAR}</td>
+			    </tr>
+				<tr>
+					<td class="bcolor2 _PorValidar1">{$ POR VALIDAR}</td>
+			    </tr>
+				<tr>
+					<td class="bcolor5">&nbsp;</td>
+			    </tr>
+				<tr>
+					<td class="bcolor2 validados1">{VALIDADOS}</td>
+			    </tr>
+				<tr>
+					<td class="bcolor2 _Validado1">{$ VALIDADO}</td>
+			    </tr>
+				<tr>
+					<td class="bcolor2 nXmlValidado1">{No. XML VALIDADO}</td>
+			    </tr>
+				<tr>
+					<td class="bcolor5">&nbsp;</td>
+			    </tr>
+				<tr>
+					<td class="bcolor2 sinProcesarAyer1">{SIN PROCESAR AYER}</td>
+			    </tr>
+				<tr>
+					<td class="bcolor2 incompletoAyer1">{INCOMPLETOS AYER}</td>
+			    </tr>
+				<tr>
+					<td class="bcolor2 validadosAyer1">{VALIDADOS AYER}</td>
+			    </tr>
+		      </table>
+
+			
+			</td>
+
+<!---------------------------------------------------------------------------------->
+	
+		</tr>
+	</table>
+	
+		<!---------------------------------------------------------------------------------->
+		
+		<table style="margin: auto; margin-top: 70px;" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<table>
+						<tr>
+							<td style="border-bottom: 1px solid black">
+								
+							</td>
+						</tr>
+						<tr>
+							<td align="center">
+								Validaciones - Sandra Chang<br>(Firma)
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td style="width: 50px;">
+				</td>
+				<td>
+					<table>
+						<tr>
+							<td style="border-bottom: 1px solid black">
+								
+							</td>
+						</tr>
+						<tr>
+							<td align="center">
+								Validaciones - Gloria Arrevillaga<br>(Firma)
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td style="width: 50px;">
+				</td>
+				<td>
+					<table>
+						<tr>
+							<td style="border-bottom: 1px solid black">
+								
+							</td>
+						</tr>
+						<tr>
+							<td align="center">
+								Validaciones - Cinthia Molina<br>(Firma)
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		
+		<!---------------------------------------------------------------------------------->
+		
+		<table style="margin: auto; margin-top: 60px;" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<table>
+						<tr>
+							<td style="border-bottom: 1px solid black">
+								
+							</td>
+						</tr>
+						<tr>
+							<td align="center" style="width: 250px;">
+								Contraloría<br>(Nombre y Firma)
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td style="width: 50px;">
+				</td>
+				<td>
+					<table>
+						<tr>
+							<td style="border-bottom: 1px solid black">
+								
+							</td>
+						</tr>
+						<tr>
+							<td align="center" style="width: 250px;">
+								Tesorería - C.P. Alma Ventura<br>(Nombre y Firma)
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		
+		<!---------------------------------------------------------------------------------->
+	</td>    
+</tr>
+</table>
+	
+</body>
+</html>

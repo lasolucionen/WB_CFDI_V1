@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://validar/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="Validador" targetNamespace="http://validar/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://cfdiee.com:8080/Validadorfull/Validador?xsd=1" namespace="http://validar/" />
+    </xsd:schema>
+  </types>
+  <message name="ValidaAll">
+    <part name="parameters" element="tns:ValidaAll" />
+  </message>
+  <message name="ValidaAllResponse">
+    <part name="parameters" element="tns:ValidaAllResponse" />
+  </message>
+  <message name="ValidaAgente">
+    <part name="parameters" element="tns:ValidaAgente" />
+  </message>
+  <message name="ValidaAgenteResponse">
+    <part name="parameters" element="tns:ValidaAgenteResponse" />
+  </message>
+  <message name="ValidaAllE">
+    <part name="parameters" element="tns:ValidaAllE" />
+  </message>
+  <message name="ValidaAllEResponse">
+    <part name="parameters" element="tns:ValidaAllEResponse" />
+  </message>
+  <message name="ValidaAgenteE">
+    <part name="parameters" element="tns:ValidaAgenteE" />
+  </message>
+  <message name="ValidaAgenteEResponse">
+    <part name="parameters" element="tns:ValidaAgenteEResponse" />
+  </message>
+  <portType name="Validador">
+    <operation name="ValidaAll">
+      <input wsam:Action="http://validar/Validador/ValidaAllRequest" message="tns:ValidaAll" />
+      <output wsam:Action="http://validar/Validador/ValidaAllResponse" message="tns:ValidaAllResponse" />
+    </operation>
+    <operation name="ValidaAgente">
+      <input wsam:Action="http://validar/Validador/ValidaAgenteRequest" message="tns:ValidaAgente" />
+      <output wsam:Action="http://validar/Validador/ValidaAgenteResponse" message="tns:ValidaAgenteResponse" />
+    </operation>
+    <operation name="ValidaAllE">
+      <input wsam:Action="http://validar/Validador/ValidaAllERequest" message="tns:ValidaAllE" />
+      <output wsam:Action="http://validar/Validador/ValidaAllEResponse" message="tns:ValidaAllEResponse" />
+    </operation>
+    <operation name="ValidaAgenteE">
+      <input wsam:Action="http://validar/Validador/ValidaAgenteERequest" message="tns:ValidaAgenteE" />
+      <output wsam:Action="http://validar/Validador/ValidaAgenteEResponse" message="tns:ValidaAgenteEResponse" />
+    </operation>
+  </portType>
+  <binding name="ValidadorPortBinding" type="tns:Validador">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="ValidaAll">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ValidaAgente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ValidaAllE">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ValidaAgenteE">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Validador">
+    <port name="ValidadorPort" binding="tns:ValidadorPortBinding">
+      <soap:address location="http://cfdiee.com:8080/Validadorfull/Validador" />
+    </port>
+  </service>
+</definitions>

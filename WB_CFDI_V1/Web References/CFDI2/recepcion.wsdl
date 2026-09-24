@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://www.facturemosya.com/soap/validarComprobantesCfdi" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://www.facturemosya.com/soap/validarComprobantesCfdi" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.facturemosya.com/soap/validarComprobantesCfdi">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+      <xsd:complexType name="Respuesta">
+        <xsd:all>
+          <xsd:element minOccurs="1" maxOccurs="1" name="codigo" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="mensaje" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="validarCfdiRequest">
+    <wsdl:part name="usuario" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+    <wsdl:part name="xml" type="xsd:string" />
+    <wsdl:part name="pdf" type="xsd:string" />
+    <wsdl:part name="guardar" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="validarCfdiResponse">
+    <wsdl:part name="respuesta" type="tns:Respuesta" />
+  </wsdl:message>
+  <wsdl:portType name="validarComprobantesCfdiPortType">
+    <wsdl:operation name="validarCfdi">
+      <wsdl:input message="tns:validarCfdiRequest" />
+      <wsdl:output message="tns:validarCfdiResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="validarComprobantesCfdiBinding" type="tns:validarComprobantesCfdiPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="validarCfdi">
+      <soap:operation soapAction="http://www.facturemosya.com/webservice/recepcion.php/validarCfdi" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="validarComprobantesCfdi">
+    <wsdl:port name="validarComprobantesCfdiPort" binding="tns:validarComprobantesCfdiBinding">
+      <soap:address location="http://www.facturemosya.com/webservice/recepcion.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

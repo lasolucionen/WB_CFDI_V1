@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace WB_CFDI_V1
+{
+    public class RESUMEN_COMPRAS
+    {
+        public int    CODPROVEEDOR { get; set; }
+        public string NOMPROVEEDOR { get; set; }
+        public string RFC          { get; set; }
+        public double SUBTOTAL     { get; set; }
+        public double IMPUESTOS    { get; set; }
+        public double TOTAL        { get; set; }
+    }
+
+}

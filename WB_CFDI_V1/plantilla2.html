@@ -1,0 +1,368 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<style type="text/css">
+	    html,
+		body {
+			height: 100%;
+		}
+	
+        table, td {
+			/*border-collapse: collapse;*/
+			border:0px;
+			/*border: 1px solid #D9D9D9;*/	/*border-spacing: 1px;*/
+        }
+		
+		.border1{
+			border: 0.1em solid #C4C4C4;
+		}
+		
+		.paddR{
+			padding-right: 5px;
+			height: 24px;
+			text-align: right;
+			vertical-align: middle;
+		}
+		
+		.paddL{
+			padding-left: 5px;
+			height: 24px;
+			text-align: left;
+			vertical-align: middle;
+		}
+		
+		.BorderB1 {			
+			border-bottom:0.1em solid #C4C4C4;
+		}
+		
+		.BorderL1 {			
+			border-left:0.1em solid #C4C4C4;
+		}
+
+.MarginB1 {            margin-bottom: 6px;
+}
+.PaddingL1 {			padding-left:10px;
+}
+.Size1 {            /*word-spacing: 20px;*/
+			font-size: 12px;
+}
+    </style>
+</head>
+
+<body style="margin: 10px;">
+<table width="100%" cellpadding="0" cellspacing="2" class="border1" style="margin-bottom: 5px;">
+  <tbody>
+    <tr>
+      <td height="134" valign="top" style="padding-left: 5px;"><table width="100%">
+        <tbody>
+          <tr>
+            <td style="font-weight: bold" id="emisorNombre">JOSE LUIS HERNANDEZ GARCIA</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold" id="emisorRFC">HEGL6402288K0</td>
+          </tr>
+          <tr>
+			  <td><span id="emisorCalle">3a. AVENIDA NORTE</span>, <span id="emisorNoExterior">151</span></td>
+          </tr>
+          <tr>
+            <td><span id="emisorColonia">CENTRO</span>, <span id="emisorLocalidad">TAPACHULA</span></td>
+          </tr>
+          <tr>
+            <td><span id="emisorPais">MEXICO</span>, <span id="emisorEstado">CHIAPAS</span> C.P. <span id="emisorCodigoPostal">30700</span></td>
+          </tr>
+        </tbody>
+      </table></td>
+      <td width="340" rowspan="2" valign="top"><table width="100%" border="1" cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <td height="40" align="center" bgcolor="#800000" style="font-size: 22px; font-weight: bold; font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #FFFFFF;">FACTURA ELECTRONICA</td>
+          </tr>
+          <tr>
+            <td bgcolor="#F0F0F0" style="font-weight: bold" class="paddR">Folio Factura Interno:</td>
+          </tr>
+          <tr>
+            <td class="paddR" id="folio">12312</td>
+          </tr>
+          <tr>
+            <td bgcolor="#F0F0F0" style="font-weight: bold" class="paddR">Folio Fiscal:</td>
+          </tr>
+          <tr>
+            <td class="paddR" id="complementoUUID">C4282346-48F3-49AF-AF7F-2025AAC09B9B</td>
+          </tr>
+          <tr>
+            <td bgcolor="#F0F0F0" style="font-weight: bold" class="paddR">No de Serie del Certificado del CSD:</td>
+          </tr>
+          <tr>
+            <td style="font-weight: normal" class="paddR" id="noCertificado">00001000000304507091</td>
+          </tr>
+          <tr>
+            <td bgcolor="#F0F0F0" style="font-weight: bold" class="paddR"><span class="paddR" style="font-weight: bold">Fecha y hora de emisión:</span></td>
+          </tr>
+          <tr>
+			  <td style="font-weight: normal" class="paddR"><span id="fecha">2017-12-12T13:45:38</span></td>
+          </tr>
+        </tbody>
+      </table></td>
+    </tr>
+    <tr>
+      <td valign="top"><table width="100%" border="1" cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <td bgcolor="#F0F0F0" style="font-weight: bold" class="paddL">Régimen Fiscal:</td>
+          </tr>
+          <tr>
+            <td style="font-weight: normal" class="paddL" id="emisorRegimen">REGIMEN GENERAL DE LEY PERSONA FISICA CON ACTIVIDAD EMPRESARIAL</td>
+          </tr>
+          <tr>
+            <td bgcolor="#F0F0F0" style="font-weight: bold" class="paddL">Lugar de expedición:</td>
+          </tr>
+          <tr>
+            <td style="font-weight: normal" class="paddL" id="lugarExpedicion">3A. AVENIDA NORTE 151 , CENTRO, 30700, TAPACHULA, TAPACHULA, CHIAPAS, MEXICO</td>
+          </tr>
+        </tbody>
+      </table></td>
+    </tr>
+  </tbody>
+</table>
+	
+<div style="height: 4px;background-color: #800000"></div>
+<table width="100%" cellpadding="0" cellspacing="2" class="border1" style="margin-bottom: 5px;">
+  <tbody>
+    <tr>
+      <td bgcolor="#F0F0F0" style="font-weight: bold;" class="paddL">Cliente:</td>
+      <td width="390">&nbsp;</td>
+    </tr>
+    <tr>
+      <td class="paddL" style="font-weight: bold;" id="receptorNombre">PATENTES Y SERVICIOS INMOBILIARIOS S.A. DE C.V.</td>
+      <td rowspan="5" class="paddR">&nbsp;</td>
+    </tr>
+    <tr>
+      <td class="paddL" style="font-weight: bold;" id="receptorRFC">PSI0401308Y2</td>
+    </tr>
+    <tr>
+      <td class="paddL"><span id="receptorCalle">CARRETERA A TALISMAN</span>, <span id="receptorNoExterior">KM 2 S/N</span></td>
+    </tr>
+    <tr>
+      <td class="paddL" id="receptorColonia">MAGISTERIAL 1,</td>
+    </tr>
+    <tr>
+      <td class="paddL"><span id="receptorPais">MEXICO</span>, <span id="receptorEstado">CHIAPAS</span> C.P.<span id="receptorCodigoPostal">30770</span></td>
+    </tr>
+  </tbody>
+</table>
+	
+<div style="height: 4px;background-color: #800000"></div>
+<table width="100%" cellpadding="0" cellspacing="0" class="border1 MarginB1 Size1" id="concepto">
+  <tbody>
+    <tr>
+      <td width="50" height="20" align="center" valign="middle" bgcolor="#F0F0F0" class="BorderB1"><strong>CANT</strong></td>
+      <td width="50" align="center" valign="middle" bgcolor="#F0F0F0" class="BorderL1 BorderB1"><strong>UNI</strong></td>
+      <td align="left" valign="middle" bgcolor="#F0F0F0" class="MarginB1 Size1 PaddingL1 BorderB1 BorderL1"><strong>DESCRIPCION</strong></td>
+      <td width="100" align="center" valign="middle" bgcolor="#F0F0F0" class="BorderL1 BorderB1">P/U</td>
+      <td width="100" align="center" valign="middle" bgcolor="#F0F0F0" class="BorderL1 BorderB1">IMPORTE</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+    </tr>
+    <tr class="dataRow1">
+      <td height="23" align="center" valign="middle">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="left" valign="middle" class="MarginB1 Size1 BorderL1 PaddingL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+      <td align="center" valign="middle" class="BorderL1">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="2" class="border1" style="margin-bottom: 5px;">
+  <tbody>
+    <tr>
+      <td width="135" class="paddR" style="font-weight: bold;">Forma de Pago:</td>
+      <td class="paddL" id="formaDePago">PAGO EN UNA SOLA EXHIBICION</td>
+      <td width="90" class="paddR" style="font-weight: bold;">SubTotal:</td>
+      <td width="140" class="paddR" id="subTotal">$ 18,750.10</td>
+    </tr>
+    <tr>
+      <td class="paddR" style="font-weight: bold;">Metodo de Pago:</td>
+      <td class="paddL" id="metodoDePago">03 TRANSFERENCIA ELECTRONICA</td>
+      <td class="paddR" style="font-weight: bold;">IVA <span id="trasladoTasa">100</span>%:</td>
+      <td class="paddR" id="trasladoImporte">$ 0.00</td>
+    </tr>
+    <tr>
+      <td class="paddR" style="font-weight: bold;">Numero de Cuenta:</td>
+      <td class="paddL" id="numCtaPago">BANAMEX CTA 0591</td>
+      <td class="paddR" style="font-weight: bold;">Total:</td>
+      <td class="paddR" id="total">$ 18,750.10</td>
+    </tr>
+  </tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="2" class="border1" style="margin-bottom: 5px;">
+  <tbody>
+    <tr>
+      <td bgcolor="#F0F0F0" style="font-weight: bold;" class="paddL">Sello Digital del CFDI:</td>
+    </tr>
+    <tr>
+      <td class="paddL" id="receptorNombre2" style="word-wrap: break-word;">MpcWdMj28Aqd9rDbCPH7mxupvzUom7UdGSuy1NELSXVrSSe58h/<br>
+      sdf04sdf104sd1f04g054dg0DBJudB3sMdbGNTdEKm8ferOU6WHt6pUdjY37o5a378N8hQb3HlAgpRb6UThAkTAVwJj89RmcY/jvZWyMUqEXh03ou2rkWPMOU/3gnIrjwAf4fvyazUvTP5a4=</td>
+    </tr>
+    <tr>
+      <td bgcolor="#F0F0F0" class="paddL" id="receptorRFC2" style="font-weight: bold;">Sello del SAT:</td>
+    </tr>
+    <tr>
+      <td class="paddL">QBC8V95xT2TgKBQLloD13Mvk0eWIh16pvYGAOg0USiZuqJtzIlZEVqXasp5gG8qN/9ab/BtBIOZYZsxUg7ydsej+W9SjOMeJTVN/<br>
+        eZgjGWrlkPN73JHaTRk5M9C59Eg9kGTols34rnS+EKvmicsqGRm1YlXvGIQHnShcnJBYksLsx/10JGJotYB1nfR<br>
+        +4UA0zfkNG4WiP61+Gf9wcG9vGC9HuyVxdZVO51M+hZ3DYlqibxFoY52qv4Yg+TkwKHzFOixVandx<br>
+      +QgzlpM8gvBBQM9asfsBkmhD2yxpKSqYbheVGQCe0zsE4FoywJFep1/3YExt4TnAYunTTy2RX8XigQ==</td>
+    </tr>
+    <tr>
+      <td bgcolor="#F0F0F0" class="paddL" id="receptorColonia2" style="font-weight: bold;">Cadena Original del complemento de certificación digital del SAT:</td>
+    </tr>
+    <tr>
+      <td class="paddL">||1.0|C4282346-48F3-49AF-AF7F-2025AAC09B9B|2017-12-12T13:45:50|<br>
+        QBC8V95xT2TgKBQLloD13Mvk0eWIh16pvYGAOg0USiZuqJtzIlZEVqXasp5gG8qN/9ab/BtBIOZYZsxUg7ydsej+W9SjOMeJTVN/<br>
+        eZgjGWrlkPN73JHaTRk5M9C59Eg9kGTols34rnS+EKvmicsqGRm1YlXvGIQHnShcnJBYksLsx/10JGJotYB1nfR<br>
+        +4UA0zfkNG4WiP61+Gf9wcG9vGC9HuyVxdZVO51M+hZ3DYlqibxFoY52qv4Yg+TkwKHzFOixVandx<br>
+        +QgzlpM8gvBBQM9asfsBkmhD2yxpKSqYbheVGQCe0zsE4FoywJFep1/3YExt4TnAYunTTy2RX8XigQ==|<br>
+      00001000000404486074||</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
